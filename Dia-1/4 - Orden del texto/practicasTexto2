@@ -1,8 +1,7 @@
 <!-- Mostrar el siguiente texto, respetando tal cual el formato que tiene:
 
 Las
-
-        etiquetas
+       etiquetas
 
                           de
 
@@ -12,3 +11,22 @@ Las
 
                                                    </> 
 -->
+
+<!DOCTYPE html>
+    <head>
+        <title>Texto ordenado</title>
+    </head>
+    <body>
+        <pre>Las
+
+        etiquetas
+
+                          de
+
+                                cierre
+
+                                            son
+
+                                                ' to contain '&lt;/&gt;'</pre>
+    </body>
+</html>
