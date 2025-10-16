@@ -1,0 +1,64 @@
+/* ===== Selectores de tipo ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 40px;
+}
+
+h1 {
+    color: #2a6cc8;
+}
+
+/* ===== Selectores de clase ===== */
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #555;
+}
+
+.importante {
+    font-style: italic;
+    color: #c62828;
+}
+
+.resaltado {
+    font-weight: bold;
+    color: #1565c0;
+}
+
+/* ===== Selector de ID ===== */
+#perfil {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ===== Selector de atributo ===== */
+a[href="CV.html"] {
+    color: #2196f3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== Pseudo-clase ===== */
+a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* ===== Pseudo-elemento ===== */
+p::first-line {
+    font-weight: bold;
+    color: #333;
+}
+
+/* ===== Combinador (descendiente) ===== */
+div p {
+    line-height: 1.6;
+    font-size: 1em;
+}

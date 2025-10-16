@@ -1,0 +1,40 @@
+<!--Vincular el CSS externo.
+Mínimo 2 clases (.clase).
+Etiquetas <div>.
+Reemplazar formatos <i>, <b>, etc. por <span> con clases.
+3 tipos de selectores:
+Tipo, clase, ID
+Atributo
+Pseudo-clase y pseudo-elemento
+Al menos un combinador (div p, h1 + p, etc.)-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Biografía</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="perfil">
+        <img src="daniel.png" width="200" alt="Daniel" hspace="20">
+
+        <h1 class="titulo-principal">Bienvenido, soy Daniel Rodrigo</h1>
+        <h2 class="subtitulo">Estoy aprendiendo a ser desarrollador web</h2>
+    </div>
+
+    <div class="biografia">
+        <h3>Un poco sobre mí:</h3>
+        <p>¡Hola!</p>
+        <p>
+            Soy un programador Java, trabajador de una consultora 
+            <span class="importante">importante de Sevilla</span>,
+            <br>que quiere seguir ampliando sus conocimientos y por ello se adentra al
+            <br><span class="resaltado">fascinante mundo de la programación web.</span>
+        </p>
+        <p>Pincha <a href="CV.html">aquí</a> para ver mi CV</p>
+    </div>
+
+</body>
+</html>
