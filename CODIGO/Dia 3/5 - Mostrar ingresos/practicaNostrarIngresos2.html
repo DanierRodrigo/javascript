@@ -14,7 +14,10 @@ utilizando el contenido del input
         <button onclick="mostrarTexto()">Click aqui</button>
         <h1 id="titulo"></h1>
         <script>
-            
+            function mostrarTexto(){
+            let texto = document.getElementById("inputTexto").value;
+            document.getElementById("titulo").textContent = "Mi artista favorito es " + texto;
+            }
         </script>
     </body>
 </html>
