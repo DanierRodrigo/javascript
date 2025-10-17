@@ -7,6 +7,17 @@ el mensaje "Se acabo el tiempo".-->
     <title>Práctica Temporizador 1</title>
 </head>
 <body>
-    
+    <button onclick="comenzarTiempo()">Alarma</button>
+
+    <script>
+
+        function comenzarTiempo(){
+            setTimeout(tiempoCumplido, 1000 * 10);
+        }
+
+        function tiempoCumplido(){
+            alert("¡Se acabó el tiempo!");
+        }
+    </script>
 </body>
 </html>
