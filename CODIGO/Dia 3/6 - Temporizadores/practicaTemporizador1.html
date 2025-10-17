@@ -9,5 +9,17 @@ muestre en un alert el mensaje
 </head>
 <body>
     
+    <button onclick="comenzarTiempo()">Alarma</button>
+
+    <script>
+
+        function comenzarTiempo(){
+            setTimeout(tiempoCumplido, 1000 * 5);
+        }
+
+        function tiempoCumplido(){
+            alert("¡Se acabó el tiempo!");
+        }
+    </script>
 </body>
 </html>
