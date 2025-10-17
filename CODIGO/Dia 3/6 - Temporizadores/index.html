@@ -3,10 +3,14 @@
     <title>Temporizador</title>
 </head>
 <body>
+    <input type="number" id="tiempoElegido">
     <button onclick="comenzarTiempo()">Alarma</button>
+    
     <script>
+        let elementoSegundos = document.getElementById("tiempoElegido");
+
         function comenzarTiempo(){
-            setTimeout(tiempoCumplido, 1000 * 5);
+            setTimeout(tiempoCumplido, 1000 * elementoSegundos.value);
         }
 
         function tiempoCumplido(){
