@@ -5,13 +5,27 @@ la función test para reproducir
 el audio del elemento audioAlarma-->
 
 <!DOCTYPE html>
+<html>
     <head>
         <title>Audio 1</title>
     </head>
     <body>
+        <button onclick="test()">Alarma</button>
+    
         <audio id="audioAlarma">
-        <source src="Audios/alarma.mp3" type="audio/mp3">
-        
-    </audio>
+            <source src="alarma.mp3" type="audio/mp3">
+        </audio>
+
+        <script>
+            let elementoSonidoAlarma = document.getElementById("audioAlarma");
+
+            function test() {
+                setTimeout(tiempoCumplido, 1000 * 2);
+            }
+
+            function tiempoCumplido() {
+                elementoSonidoAlarma.play();
+            }
+        </script>
     </body>
 </html>
