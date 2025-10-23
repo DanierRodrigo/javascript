@@ -8,9 +8,13 @@ que proporciona el objeto Date.-->
     <title>Temporizador</title>
     
 </head>
-<body>
-    function mostrarFecha(){
-        
-    }
+<body onload="mostrarFecha()">
+    <script>
+        function mostrarFecha() {
+            const hoy = new Date(); // Obtiene la fecha actual
+            const fechaFormateada = hoy.toLocaleDateString('es-ES'); // Formato DD/MM/YYYY
+            alert("La fecha de hoy es: " + fechaFormateada);
+        }
+    </script>
 </body>
 </html>
