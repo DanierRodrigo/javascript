@@ -18,6 +18,11 @@
 
         <button id="comprobar">¡Listo!</button>
 
+        <!-- 🔊 Etiqueta de audio para el sonido del fin del juego -->
+        <audio id="audioGameOver" src="Audios/alarma.mp3" type="audio/mp3"></audio>
+
+    </audio>
+
         <script>
             function iniciarCuentaRegresiva() {
                 let tiempo = 30;
@@ -31,14 +36,21 @@
                     // Cuando llegue a 0, detenemos el contador
                     if (tiempo <= 0) {
                         clearInterval(intervalo);
-                        alert("¡Tiempo terminado!");
+                        gameOver();
                     }
                 }, 1000);
 
                 // También podríamos usar setTimeout si queremos hacer algo al final del tiempo
                 setTimeout(() => {
                     clearInterval(intervalo);
+                    gameOver();
                 }, 30000); // 30 segundos = 30000 milisegundos
+            }
+
+            function gameOver() {
+                const audio = document.getElementById("audioGameOver");
+                audio.play(); // 🔊 Reproducimos el sonido
+                alert("⏰ ¡Game Over! Se acabó el tiempo."); // Mostramos mensaje
             }
         </script>
     </body>
