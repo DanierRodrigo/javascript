@@ -3,7 +3,7 @@
         <title>Juego Preguntas</title>
         <link rel="stylesheet" href="misEstilos.css">
     </head>
-    <body>
+    <body onload="iniciarCuentaRegresiva()">
         <h1 id="contador">30</h1>
         <h1>Recordando capitales de países</h1>
 
@@ -18,6 +18,28 @@
 
         <button id="comprobar">¡Listo!</button>
 
-        
+        <script>
+            function iniciarCuentaRegresiva() {
+                let tiempo = 30;
+                const contador = document.getElementById("contador");
+
+                // Cada segundo restamos 1
+                const intervalo = setInterval(() => {
+                    tiempo--;
+                    contador.textContent = tiempo;
+
+                    // Cuando llegue a 0, detenemos el contador
+                    if (tiempo <= 0) {
+                        clearInterval(intervalo);
+                        alert("¡Tiempo terminado!");
+                    }
+                }, 1000);
+
+                // También podríamos usar setTimeout si queremos hacer algo al final del tiempo
+                setTimeout(() => {
+                    clearInterval(intervalo);
+                }, 30000); // 30 segundos = 30000 milisegundos
+            }
+        </script>
     </body>
 </html>
