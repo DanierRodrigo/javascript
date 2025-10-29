@@ -1,0 +1,95 @@
+/* 🎨 Estilos generales */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+/* 🕒 Título del contador */
+#contador {
+  font-size: 60px;
+  color: #e53935;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* 🏁 Título principal */
+h1 {
+  color: #00796b;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 📋 Preguntas */
+p {
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* ✏️ Campos de texto */
+input[type="text"] {
+  width: 280px;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #4db6ac;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 8px rgba(0, 150, 136, 0.3);
+}
+
+/* 🔘 Botones */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+/* 🟢 Botón Finalizar */
+#finalizar {
+  background-color: #ff7043;
+}
+
+/* 🔵 Botón Reiniciar */
+#reiniciar {
+  background-color: #0074d9;
+}
+
+/* ✨ Efecto hover */
+button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* 📦 Contenedor de botones */
+div {
+  margin-top: 20px;
+}
+
+/* 📱 Adaptación para pantallas pequeñas */
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
+
+  button {
+    width: 80%;
+  }
+}

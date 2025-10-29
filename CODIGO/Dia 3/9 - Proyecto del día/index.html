@@ -3,65 +3,64 @@
         <title>Juego Preguntas</title>
         <link rel="stylesheet" href="misEstilos.css">
     </head>
-    <body onload="iniciarCuentaRegresiva()">
+    <body onload="comenzarCuentaRegresiva()">
         <h1 id="contador">30</h1>
         <h1>Recordando capitales de países</h1>
 
-        <p>1. ¿Cuál es la capital de Paises Bajos?</p>
+        <p>¿Cuál es la capital de Paises Bajos?</p>
         <input type="text" id="respuesta1">
 
-        <p>2. ¿Cuál es la capital de Francia?</p>
+        <p>¿Cuál es la capital de Francia?</p>
         <input type="text" id="respuesta2">
 
-        <p>3. ¿Cuál es la capital de Escocia?</p>
+        <p>¿Cuál es la capital de Escocia?</p>
         <input type="text" id="respuesta3">
 
-        <p>4. ¿Cuál es la capital de Alemania?</p>
+        <p>¿Cuál es la capital de Alemania?</p>
         <input type="text" id="respuesta4">
 
-        <p>5. ¿Cuál es la capital de Italia?</p>
+        <p>¿Cuál es la capital de Italia?</p>
         <input type="text" id="respuesta5">
 
-        
+        <div>
+        <button id="finalizar" onclick="finalizar()">Finalizar Juego</button>
+        <button id="reiniciar" onclick="location.reload()">Volver a intentar</button>
+        </div>
 
         <!-- 🔊 Etiqueta de audio para el sonido del fin del juego -->
         <audio id="audioGameOver" src="Audios/alarma.mp3" type="audio/mp3"></audio>
-        </audio>
-
-        <!-- 🔘 Nuevo botón para finalizar el juego -->
-        <button onclick="finalizarJuego()">Finalizar Juego</button>
 
         <script>
-            function iniciarCuentaRegresiva() {
-                let tiempo = 30;
-                const contador = document.getElementById("contador");
+            // Variables globales para controlar los tiempos
+            let tiempo = 30;
+            let tiempoTerminado;
+            let intervaloDeTiempo;
 
-                // Cada segundo restamos 1
-                const intervalo = setInterval(() => {
+            function comenzarCuentaRegresiva() {
+                const contador = document.getElementById("contador");
+                tiempo = 30;
+
+                // Seteamos el timeout y el intervalo
+                tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+                intervaloDeTiempo = setInterval(ticTac, 1000);
+
+                function ticTac() {
                     tiempo--;
                     contador.textContent = tiempo;
-
-                    // Cuando llegue a 0, detenemos el contador
                     if (tiempo <= 0) {
-                        clearInterval(intervalo);
-                        gameOver();
+                        clearInterval(intervaloDeTiempo);
                     }
-                }, 1000);
-
-                // También podríamos usar setTimeout si queremos hacer algo al final del tiempo
-                setTimeout(() => {
-                    clearInterval(intervalo);
-                    gameOver();
-                }, 30000); // 30 segundos = 30000 milisegundos
+                }
             }
 
-            function gameOver() {
+            function tiempoCumplido() {
                 const audio = document.getElementById("audioGameOver");
-                audio.play(); // 🔊 Reproducimos el sonido
-                alert("⏰ ¡Game Over! Se acabó el tiempo."); // Mostramos mensaje
-            }
+                audio.play();
+                alert("⏰ ¡Game Over! Se acabó el tiempo.");
+            } 
 
-            function finalizarJuego() {
+
+            function finalizar() {
             // Obtenemos las respuestas
             const r1 = document.getElementById("respuesta1").value;
             const r2 = document.getElementById("respuesta2").value;
@@ -86,7 +85,7 @@
             // Mostramos el resumen al jugador
             alert(mensaje);
         }
-        
+
         </script>
     </body>
 </html>
