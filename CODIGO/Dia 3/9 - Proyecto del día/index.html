@@ -16,12 +16,20 @@
         <p>3. ¿Cuál es la capital de Escocia?</p>
         <input type="text" id="respuesta3">
 
-        <button id="comprobar">¡Listo!</button>
+        <p>4. ¿Cuál es la capital de Alemania?</p>
+        <input type="text" id="respuesta4">
+
+        <p>5. ¿Cuál es la capital de Italia?</p>
+        <input type="text" id="respuesta5">
+
+        
 
         <!-- 🔊 Etiqueta de audio para el sonido del fin del juego -->
         <audio id="audioGameOver" src="Audios/alarma.mp3" type="audio/mp3"></audio>
+        </audio>
 
-    </audio>
+        <!-- 🔘 Nuevo botón para finalizar el juego -->
+        <button onclick="finalizarJuego()">Finalizar Juego</button>
 
         <script>
             function iniciarCuentaRegresiva() {
@@ -52,6 +60,33 @@
                 audio.play(); // 🔊 Reproducimos el sonido
                 alert("⏰ ¡Game Over! Se acabó el tiempo."); // Mostramos mensaje
             }
+
+            function finalizarJuego() {
+            // Obtenemos las respuestas
+            const r1 = document.getElementById("respuesta1").value;
+            const r2 = document.getElementById("respuesta2").value;
+            const r3 = document.getElementById("respuesta3").value;
+            const r4 = document.getElementById("respuesta4").value;
+            const r5 = document.getElementById("respuesta5").value;
+
+            // Obtenemos la fecha y hora actual
+            const fecha = new Date();
+
+            // Creamos el mensaje final
+            const mensaje = 
+                `🎉 Juego Finalizado 🎉\n\n` +
+                `Fecha: ${fecha.toLocaleString()}\n\n` +
+                `Tus respuestas fueron:\n` +
+                `1️⃣ ${r1}\n` +
+                `2️⃣ ${r2}\n` +
+                `3️⃣ ${r3}\n` +
+                `4️⃣ ${r4}\n` +
+                `5️⃣ ${r5}`;
+
+            // Mostramos el resumen al jugador
+            alert(mensaje);
+        }
+        
         </script>
     </body>
 </html>
