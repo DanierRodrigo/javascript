@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Funciones</title>
+</head>
+<body>
+    <script>
+        function sumar(){
+            resultado = 2 + 3;
+            return resultado;      //Return corta la ejecución del código,
+            nombre = "Daniel";     //No va a llegar a esta línea.
+            return nombre;
+        }
+
+        let numero = "El número es " + sumar();
+        alert(numero);
+        alert(nombre);             //No aparecerá
+    </script>
+</body>
+</html>
