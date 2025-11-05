@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <title>Parámetros</title>
+</head>
+<body>
+    <p>Primer número</p>
+    <input type="number" id="num1">
+    <p>Segundo número</p>
+    <input type="number" id="num2">
+
+    <button onclick="mostrarResultado()">Calcular</button>
+    <h2 id="textoResultado"></h2>
+
+    <script>
+        function sumar(num1,num2){
+            resultado = +num1 + +num2; //Añadiendo +, convierte a la variable en number
+            return resultado;     
+        }
+
+        function mostrarResultado(){
+            let elementoNumero1 = document.getElementById("num1");
+            let elementoNumero2 = document.getElementById("num2");
+            let elementoTexto = document.getElementById("textoResultado");
+            let elementoSuma = sumar(elementoNumero1.value, elementoNumero2.value);
+
+            elementoTexto.textContent = elementoSuma;
+        }
+
+    </script>
+</body>
+</html>
