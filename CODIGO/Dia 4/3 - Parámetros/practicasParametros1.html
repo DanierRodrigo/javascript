@@ -6,6 +6,18 @@ realice la suma entre ambos y muestre su resultado en un alert.-->
     <title>Práctica parámetros 1</title>
 </head>
 <body>
+    <p>Primer número</p>
+    <input type="number" id="numero1">
+    <p>Segundo número</p>
+    <input type="number" id="numero2">
 
+    <button onclick="suma(document.getElementById('numero1').value, document.getElementById('numero2').value)">Calcular</button>
+
+    <script>
+        function suma(numero1,numero2){
+            let resultado = Number(numero1) + Number(numero2);
+            alert(resultado);  
+        }
+    </script>
 </body>
 </html>
