@@ -13,6 +13,11 @@ y retornarla para que la función mostrarFecha la utilice.-->
         function mostrarFecha() {
             alert(obtenerFecha());
         }
+
+        function obtenerFecha() {
+            let fechaActual = new Date();
+            return fechaActual.toLocaleDateString('es-ES');
+        }
     </script>
 </body>
 </html>
