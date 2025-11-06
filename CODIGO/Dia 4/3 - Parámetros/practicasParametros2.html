@@ -8,6 +8,28 @@ el mensaje que recibio por parámetro.-->
     <title>Práctica parámetros 2</title>
 </head>
 <body>
+    <p>Escribe un mensaje</p>
+    <input type="text" id="mensaje">
+
+    <button onclick="salvarTexto()">Mostrar</button>
     
+    <script>
+        function mostrarMensaje(mensaje){
+            alert(mensaje);
+        }
+
+        function salvarTexto(){
+            // Obtenemos el elemento input
+            let elementoMensaje = document.getElementById("mensaje");
+            
+            // Guardamos el valor
+            let mensajeIngresado = elementoMensaje.value;
+
+            // Llamamos a la función con el parámetro
+            mostrarMensaje(mensajeIngresado);
+        }
+
+
+    </script>
 </body>
 </html>
