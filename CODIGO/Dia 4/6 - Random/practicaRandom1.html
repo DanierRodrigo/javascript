@@ -1,4 +1,7 @@
 <!--Genere un número aleatorio entre 10 y 50
 como límites inferior y superior respectivamente. -->
 
-let aleatorio;
+let min = 10;
+let max = 50;
+
+let aleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
