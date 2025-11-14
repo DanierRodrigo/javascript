@@ -1,0 +1,132 @@
+/* misEstilos.css — Estilos para "Calculadora Online" */
+
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Fondo y contenedor centrado */
+body {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8 0%, #dfe9f3 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #0b2545;
+}
+
+/* Usamos el primer contenedor <div> como 'panel' de la calculadora mediante un envoltorio virtual */
+body > div:first-of-type,
+body > div:nth-of-type(2),
+body > div:nth-of-type(3),
+body > div:nth-of-type(4),
+body > div:nth-of-type(5) {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Caja principal visual (no requiere cambio en el HTML) */
+body {
+  --card-radius: 14px;
+}
+
+h1 {
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  color: #0b3558;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* Agrupar las filas de controles: cada div se muestra como fila flexible */
+body > div {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inputs (números) — se adaptan al espacio disponible */
+#numero1,
+#numero2 {
+  flex: 1 1 48%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #c7d5e6;
+  background: #fbfdff;
+  outline: none;
+  transition: box-shadow 0.15s ease, transform 0.05s ease;
+}
+#numero1:focus, #numero2:focus {
+  box-shadow: 0 4px 14px rgba(14,50,90,0.08);
+  transform: translateY(-1px);
+}
+
+/* Resultado: más grande y alineado a la derecha */
+#resultado {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1.15rem;
+  border-radius: 10px;
+  border: 1px solid #b9cbe0;
+  background: #eef6ff;
+  text-align: right;
+  font-weight: 600;
+}
+
+/* Botones: estilo base */
+button {
+  padding: 10px 14px;
+  min-width: 60px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(11,37,71,0.06);
+  transition: transform 0.06s ease, box-shadow 0.06s ease, opacity 0.12s ease;
+  background: linear-gradient(180deg, #ffffff, #eef6ff);
+  color: #0b3358;
+}
+button:hover { transform: translateY(-3px); }
+button:active { transform: translateY(-1px); box-shadow: 0 3px 8px rgba(11,37,71,0.08); }
+
+/* Tamaños: si hay muchos botones, que se ajusten */
+body > div:nth-of-type(2) button,
+body > div:nth-of-type(3) button,
+body > div:nth-of-type(4) button {
+  flex: 1 1 auto;
+}
+
+/* Estilos específicos para operaciones principales */
+#sumar { background: linear-gradient(180deg, #e6ffef, #d1f8e0); color: #0a6640; }
+#restar { background: linear-gradient(180deg, #fff7e6, #ffe6c7); color: #8a5a00; }
+#multiplicar { background: linear-gradient(180deg, #fff0f6, #ffdfee); color: #7a2350; }
+#dividir { background: linear-gradient(180deg, #eef8ff, #dbeeff); color: #0b4d77; }
+
+/* Botones de funciones secundarias */
+#potencia, #raiz, #absoluto, #random { background: linear-gradient(180deg,#f7fbff,#eef6ff); color: #0b3558; }
+
+/* Botones de redondeo */
+#round, #floor, #ceil { background: linear-gradient(180deg,#f4f8ff,#e6f0ff); color: #123a66; }
+
+/* Responsive: en pantallas pequeñas, los grupos se apilan verticalmente */
+@media (max-width: 480px) {
+  body > div { flex-direction: column; gap: 10px; }
+  input#numero1, input#numero2 { width: 100%; }
+  button { width: 100%; }
+  h1 { font-size: 1.3rem; }
+}
+
+/* Pequeño detalle accesible: focus visible claro */
+:focus {
+  outline: 3px solid rgba(12,97,177,0.12);
+  outline-offset: 2px;
+}
+
+/* Opcional: desactivar selección en botones para mejor sensación táctil */
+button { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
