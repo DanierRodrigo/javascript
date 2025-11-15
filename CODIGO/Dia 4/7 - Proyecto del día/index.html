@@ -5,44 +5,43 @@
         <script src="misScripts.js"></script>
     </head>
     <body>
-        <h1>Calculadora Online</h1>
 
-        <div>
-            <input type="text" id="numero1">
-            <input type="text" id="numero2">
+        <div class="calculadora">
+
+            <h1>Calculadora Online</h1>
+
+            <div class="fila">
+                <input type="text" id="numero1">
+                <input type="text" id="numero2">
+            </div>
+
+            <div class="fila">
+                <button id="sumar" onclick="sumar()">+</button>
+                <button id="restar" onclick="restar()">-</button>
+                <button id="multiplicar" onclick="multiplicar()">x</button>
+                <button id="dividir" onclick="dividir()">/</button>
+            </div>
+
+            <div class="fila">
+                <button id="potencia" onclick="potencia()">potencia</button>
+                <button id="raiz" onclick="raiz()">raiz</button>
+            </div>
+
+            <div class="fila">
+                <button id="absoluto" onclick="absoluto()">absoluto</button>
+                <button id="random" onclick="random()">random</button>
+            </div>
+
+            <div class="fila">
+                <input type="text" id="resultado">
+            </div>
+
+            <div class="fila">
+                <button id="round" onclick="round()">round</button>
+                <button id="floor" onclick="floor()">floor</button>
+                <button id="ceil" onclick="ceil()">ceil</button>
+            </div>
         </div>
-
-        <div>
-            <button id="sumar" onclick="sumar()">+</button>
-            <button id="restar" onclick="restar()">-</button>
-            <button id="multiplicar" onclick="multiplicar()">x</button>
-            <button id="dividir" onclick="dividir()">/</button>
-        </div>
-
-        <div>
-            <button id="potencia" onclick="potencia()">potencia</button>
-            <button id="raiz" onclick="raiz()">raiz</button>
-        </div>
-
-        <div>
-            <button id="absoluto" onclick="absoluto()">absoluto</button>
-            <button id="random" onclick="random()">random</button>
-        </div>
-
-        <div>
-            <input type="text" id="resultado">
-        </div>
-
-        <div>
-            <button id="round" onclick="round()">round</button>
-            <button id="floor" onclick="floor()">floor</button>
-            <button id="ceil" onclick="ceil()">ceil</button>
-        </div>
-        
-        
-        
-
-
-        
+           
     </body>
 </html>
