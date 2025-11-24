@@ -7,6 +7,10 @@ function evaluarCompra(){
     if(precio < 5){
         elementoRespuesta.textContent = "Compra dos cartones de leche";
     }else{
-        elementoRespuesta.textContent = "Compra solo un cartón de leche";
+        if((precio >= 5) && (precio <= 8)){
+            elementoRespuesta.textContent = "Compra solo un cartón de leche";
+        }else{
+            elementoRespuesta.textContent = "Huye, esa tienda es carísima";
+        }
     }
 }
