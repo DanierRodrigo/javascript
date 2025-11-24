@@ -11,7 +11,9 @@ let precio = 0;
 function calcular(cantidad) {
     if(cantidad > 10){
         precio = 50;
-    }else{
+    }else if(cantidad < 5){
+        precio = 100;
+    }else if(cantidad >= 5 && cantidad <= 10){
         precio = 80;
     }
 }
