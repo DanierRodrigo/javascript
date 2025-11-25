@@ -7,13 +7,14 @@
     <body>
         <h3>¿Qué película ver hoy?</h3>
 
-        <input id="textoEdad" type="number">
+        <p>Edad: <input id="textoEdad" type="number"></p>
 
-        <button onclick="recomendar('accion')">Acción</button>
-        <button onclick="recomendar('drama')">Drama</button>
-        <button onclick="recomendar('clasicos')">Clásicos</button>
-        <button onclick="recomendar('disney')">Disney</button>
+        <button class="accion" onclick="recomendar('accion')">Acción</button>
+        <button class="drama" onclick="recomendar('drama')">Drama</button>
+        <button class="clasicos" onclick="recomendar('clasicos')">Clásicos</button>
+        <button class="disney" onclick="recomendar('disney')">Disney</button>
 
+        <h3>Nuestra recomendación: </h3>
         <h3 id="peliculaRecomendada"></h3>
     </body>
 </html>
