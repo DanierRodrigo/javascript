@@ -6,6 +6,10 @@ let miArray = ['A', 'A', 'B', 'A', 'B', 'B', 'A'];
 
 function testLoop() {
     for(let letra of miArray) {
-        console.log(letra);
+        if(letra == 'B'){
+            break;
+        }else{
+            console.log(letra);
+        }
     }
 }
