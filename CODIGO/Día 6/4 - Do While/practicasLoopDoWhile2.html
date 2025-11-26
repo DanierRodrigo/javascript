@@ -9,7 +9,11 @@ Es decir, que si por parámetro se pasa el numero 8, en la consola se debe impri
 24
 
 ...-->
+let contador = 1;
 
 function testLoop(numero) {
-    
+    do{
+        console.log(contador * numero);
+        contador++;
+    }while(contador != 11)
 }
