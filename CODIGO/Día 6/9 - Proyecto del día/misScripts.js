@@ -16,3 +16,16 @@ function listarCalificaciones() {
         lista.appendChild(elementoNota);
     }
 }
+
+function promedio(){
+    let sumatorioNotas = 0;
+
+    for(x = 0; x < calificaciones.length; x++){
+        sumatorioNotas = sumatorioNotas + calificaciones[x];
+    }
+
+    let resultado = sumatorioNotas / calificaciones.length;
+
+    // Mostrar el promedio en el HTML
+    document.getElementById("textoPromedio").textContent = resultado;
+}
