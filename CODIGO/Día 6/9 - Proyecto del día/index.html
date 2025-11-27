@@ -6,21 +6,29 @@
         <script src="misScripts.js"></script>
     </head>
     <body onload="listarCalificaciones()">
-        <h3>Reporte de calificaciones</h3>
 
-        <ul id="textoCalificaciones"></ul>
 
-        <button class="promedio" onclick="promedio()">Promedio</button>
-        <button class="notaMasAlta" onclick="notaMasAlta()">Nota más alta</button>
-        <button class="suspenso" onclick="suspenso()">Suspenso</button>
-        
-        <h3>Promedio: </h3>
-        <h3 id="textoPromedio"></h3>
+        <div id="contenedor-reporte">
+                <div id="calificaciones">
+                    <h3>Calificaciones</h3>
+                    <ul id="textoCalificaciones"></ul>
+                </div>
+                <div id="resultados">
+                    <h3>Promedio</h3>
+                    <div id="textoPromedio"></div>
 
-        <h3>Nota más alta: </h3>
-        <h3 id="textoNotaMasAlta"></h3>
+                    <h3>Nota más alta</h3>
+                    <div id="textoNotaMasAlta"></div>
 
-        <h3>Suspenso: </h3>
-        <h3 id="textoSuspenso"></h3>
+                    <h3>Suspenso</h3>
+                    <div id="textoSuspenso"></div>
+            </div>
+            <div id="botones">
+                <button onclick="promedio()">Promedio</button>
+                <button onclick="notaMasAlta()">Nota más alta</button>
+                <button onclick="suspenso()">Aplazo</button>
+            </div>
+        </div>
+
     </body>
 </html>

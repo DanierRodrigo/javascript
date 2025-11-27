@@ -1,0 +1,34 @@
+#contenedor-reporte {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#calificaciones, #resultados, #botones {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#calificaciones ul {
+    padding: 0;
+    margin: 0;
+}
+
+#calificaciones li {
+    list-style: none;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-left: 4px solid #1a3e5c;
+    background: #f7f9fc;
+    border-radius: 6px;
+}
+
+#botones {
+    grid-column: span 2; /* Botones ocupan toda la fila */
+    text-align: center;
+}
