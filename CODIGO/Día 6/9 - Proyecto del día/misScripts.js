@@ -29,3 +29,18 @@ function promedio(){
     // Mostrar el promedio en el HTML
     document.getElementById("textoPromedio").textContent = resultado;
 }
+
+function notaMasAlta(){
+    let i = 0;                 // índice para recorrer el array
+    let mayor = 0;             // aquí guardamos la nota más alta
+
+    while (i < calificaciones.length) {
+        if (calificaciones[i] > mayor) {
+            mayor = calificaciones[i];
+        }
+        i++;
+    }
+
+    // Mostrar el resultado en la página
+    document.getElementById("textoNotaMasAlta").textContent = mayor;
+}
