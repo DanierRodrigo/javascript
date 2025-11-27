@@ -5,5 +5,13 @@ e imprima en consola la misma.-->
 let notas = [6, 9, 7, 5, 1, 5, 4];
 
 function menorNota() {
-    
+    let menor = notas[0];
+
+    for(let nota of notas){
+        if(nota < menor){
+            menor = nota;
+        }
+    }
+
+    console.log(menor);
 }
