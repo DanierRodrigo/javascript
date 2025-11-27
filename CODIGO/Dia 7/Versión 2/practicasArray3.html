@@ -5,5 +5,11 @@ e imprima en consola el resultado del calculo realizado.-->
 let notas = [6, 9, 7, 5, 1, 5, 4, 3];
 
 function promedio() {
-    
+    let suma = 0;
+
+    for(let nota of notas){
+        suma = suma + nota;
+    }
+
+    console.log(suma / notas.length);
 }
