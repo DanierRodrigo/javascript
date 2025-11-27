@@ -44,3 +44,21 @@ function notaMasAlta(){
     // Mostrar el resultado en la página
     document.getElementById("textoNotaMasAlta").textContent = mayor;
 }
+
+function suspenso(){
+    let i = 0;
+    let haySuspenso = false;
+
+    do {
+        if(calificaciones[i] < 4){
+            haySuspenso = true;
+            break;
+        }
+
+        i++
+
+    }while (i < calificaciones.length);
+
+    // Mostrar el resultado (Sí / No)
+    document.getElementById("textoSuspenso").textContent = haySuspenso ? "Sí" : "No";
+}
