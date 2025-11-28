@@ -25,3 +25,22 @@ la función appendChild().-->
         </div>
     </body>
 </html>
+
+function generarContenido() {
+    //Obtener el div contenedor
+    let contenedor = document.getElementBy("contenido");
+
+    //Creamos el párrafo
+    let parrafo = document.createElement("p");
+    parrafo.textContent = "Párrafo 1";
+
+    //Creamos el input
+    let input = document.createElement("input");
+    input.setAttribute("id", "txtInput");
+    input.setAttribute("type", "text");
+
+    //Agregar ambos elementos al div
+    contenedor.appendChild(parrafo);
+    contenedor.appendChild(input);
+
+}
