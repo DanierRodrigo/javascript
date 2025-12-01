@@ -10,6 +10,9 @@ function crearTiendas(contenedorID, min, cantidadTiendas){
 
         //Crear tiendas con crearParrafoTienda
         let parrafoTienda = crearParrafoTienda(textoEtiqueta, min);
+
+        //Agregar el párrafo al contenedor
+        elementoContenedor.appendChild(parrafoTienda);
     }
 }
 
@@ -19,6 +22,7 @@ function crearParrafoTienda(textoLabel, valorMin){
 
     //Crear la etiqueta label
     let elementoEtiqueta = document.createElement("label");
+    elementoEtiqueta.innerText = textoLabel + ": ";
 
     //Conectar con el input
     elementoEtiqueta.setAttribute("for", textoLabel);
