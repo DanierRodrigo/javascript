@@ -14,14 +14,18 @@ y que los nombres de los campos se generen de forma dinámica*/
 
 function generarContenido(numero) {
     let content = document.getElementById("contenido");
+
+    //Creamos un ID dinámico en base al parámetro número
+    let idInput = "txtInput" + numero;
     
+    //Modificamos la creación del label
     let label = document.createElement("label");
-    label.setAttribute("for", "txtInput");
-    label.innerText = "Label";
+    label.setAttribute("for", idInput);
+    label.innerText = "Label " + numero;
     
-    
+    //Modificamos la creación del input
     let input = document.createElement("input");
-    input.setAttribute("id", "txtInput");
+    input.setAttribute("id", idInput);
     input.setAttribute("type", "number");
     input.setAttribute("value", 0);
     
