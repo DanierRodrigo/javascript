@@ -9,7 +9,9 @@ se deberán generar (mediante la función generarContenido)
  */
 
 function repetirContenido(veces) {
-    
+    for (let i = 1; i <= veces; i++) {
+        generarContenido(i);
+    }
 }
 
 function generarContenido(numero) {
