@@ -17,4 +17,17 @@ let sumaTotal = 0;
 
 function automatizarSuma() {
 
+    sumaTotal = 0; // Reiniciar antes de sumar
+
+    let contenedor = document.getElementById("contenido");
+
+    // Recorrer todos los <p> que son hijos directos de "contenido"
+    for (let i = 0; i < contenedor.children.length; i++) {
+
+        let parrafo = contenedor.children[i];       // <p>
+        let input = parrafo.children[1];            // el <input> dentro del <p>
+
+        let valor = Number(input.value);            // obtener valor numérico
+        sumaTotal += valor;                         // acumular
+    }
 }
