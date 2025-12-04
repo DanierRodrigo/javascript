@@ -64,14 +64,45 @@ function calcular(){
         posicionVentas = posicionVentas + 1;
     }
 
+    // Declaramos el loop for...of para iterar sobre todos los párrafos
+    let mayorVenta = -Infinity;  // Inicializamos con un valor muy bajo
+    let menorVenta = Infinity;  // Inicializamos con un valor muy alto
+
+    for (let item of elementosVentas.children) {
+        // Obtenemos el input dentro de cada párrafo
+        let inputElemento = item.children[1];
+        let valor = extraerNumeroDesdeElemento(inputElemento);
+
+        // Comparamos el valor de cada input para encontrar el mayor y el menor
+        if (valor > mayorVenta) {
+            mayorVenta = valor;
+        }
+        if (valor < menorVenta) {
+            menorVenta = valor;
+        }
+    }
+
     // Ahora calculamos el total de ventas
     let totalVentas = sumarTotal(ventas);
 
-    // Aquí solo mostraremos el total de ventas
+    // Mostrar el total de ventas
     let mensajeSalida = "Total Ventas: " + totalVentas;
-
     let elementoSalida = document.getElementById("parrafoSalida");
     elementoSalida.textContent = mensajeSalida;
+
+
+    // Asignar la clase al input de la mayor venta
+    for (let item of elementosVentas.children) {
+        let inputElemento = item.children[1];
+        let valor = extraerNumeroDesdeElemento(inputElemento);
+
+        if (valor === mayorVenta) {
+            inputElemento.classList.add('mayor-venta');
+        }
+        if (valor === menorVenta) {
+            inputElemento.classList.add('menor-venta');
+        }
+    }
 
 }
 
