@@ -103,11 +103,13 @@ function calcular(){
 
         // Comprobamos si el valor del input es igual al mayor valor
         if (valor === mayorVenta) {
-            inputElemento.classList.add('mayor-venta');  // Añadimos la clase para el valor mayor
+            inputElemento.classList.remove('input-reset'); // Quitamos esta clase del elemento
+            inputElemento.classList.add('mayor-venta');  //Añadimos la nuevo clase al elemento
         }
-        // Comprobamos si el valor del input es igual al menor valor
+
         if (valor === menorVenta) {
-            inputElemento.classList.add('menor-venta');  // Añadimos la clase para el valor menor
+            inputElemento.classList.remove('input-reset'); // Quitamos esta clase del elemento
+            inputElemento.classList.add('menor-venta');  //Añadimos la nuevo clase al elemento
         }
     }
 
