@@ -64,15 +64,13 @@ function calcular(){
         posicionVentas = posicionVentas + 1;
     }
 
+    // Ahora calculamos el total de ventas
     let totalVentas = sumarTotal(ventas);
-    let ventaMayor = calcularMayor(ventas);
-    let ventaMenor = calcularMenor(ventas);
 
-    let mensajeSalida = "Total Ventas: " + totalVentas +
-                        " / Mayor venta: " + ventaMayor +
-                        " / Menor venta: " + ventaMenor;
+    // Aquí solo mostraremos el total de ventas
+    let mensajeSalida = "Total Ventas: " + totalVentas;
+
     let elementoSalida = document.getElementById("parrafoSalida");
-
     elementoSalida.textContent = mensajeSalida;
 
 }
