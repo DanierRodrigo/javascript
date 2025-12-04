@@ -7,3 +7,9 @@
 .menor-venta {
     background-color: #FFCCCB;  /* Color rojo claro */
 }
+
+/* Estilo para resetear */
+.input-reset {
+    background-color: transparent; /* Sin color de fondo */
+    border: 1px solid #ccc;         /* Usamos un borde normal (opcional) */
+}

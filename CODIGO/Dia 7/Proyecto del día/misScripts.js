@@ -72,6 +72,10 @@ function calcular(){
         // Almacenamos el input (está en el índice 1 dentro del párrafo)
         let inputElemento = item.children[1];  // El input está en el índice 1
 
+        // Reseteamos el estilo de todos los inputs asignando una clase temporal
+        inputElemento.classList.remove('mayor-venta', 'menor-venta', 'input-reset');
+        inputElemento.classList.add('input-reset');  // Asignamos una clase de reset
+
         // Extraemos el valor del input
         let valor = extraerNumeroDesdeElemento(inputElemento);
 
@@ -97,11 +101,13 @@ function calcular(){
         let inputElemento = item.children[1];
         let valor = extraerNumeroDesdeElemento(inputElemento);
 
+        // Comprobamos si el valor del input es igual al mayor valor
         if (valor === mayorVenta) {
-            inputElemento.classList.add('mayor-venta');
+            inputElemento.classList.add('mayor-venta');  // Añadimos la clase para el valor mayor
         }
+        // Comprobamos si el valor del input es igual al menor valor
         if (valor === menorVenta) {
-            inputElemento.classList.add('menor-venta');
+            inputElemento.classList.add('menor-venta');  // Añadimos la clase para el valor menor
         }
     }
 
