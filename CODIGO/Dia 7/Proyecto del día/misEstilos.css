@@ -1,0 +1,9 @@
+/* Estilo para el input con la mayor venta */
+.mayor-venta {
+    background-color: #90EE90;  /* Color verde claro */
+}
+
+/* Estilo para el input con la menor venta */
+.menor-venta {
+    background-color: #FFCCCB;  /* Color rojo claro */
+}
