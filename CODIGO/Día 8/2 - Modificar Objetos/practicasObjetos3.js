@@ -12,5 +12,5 @@ let polo = {
 };
 
 function agregarPropiedad() {
-    
+    polo["genero"] = "Masculino";
 }
