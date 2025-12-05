@@ -12,5 +12,5 @@ let automovil = {
 };
 
 function modificarAnio() {
-    
+    automovil.anio = 2018;
 }
