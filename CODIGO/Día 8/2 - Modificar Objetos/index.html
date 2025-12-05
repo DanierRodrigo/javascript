@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modificar Objetos</title>
+    </head>
+    <body>
+        <script>
+            let perro = {
+                nombre: "Simba",
+                raza: "Shin Tzu",
+                edad: 4,
+
+                ladrar() {
+                    console.log("Guau");                   
+                }
+            }
+
+            function aumentarEdad(){
+                perro.edad = perro.edad + 1;  //Así podemos modificar valores de atributo
+            }
+
+            perro["colorOjos"] = "marrón";  //Así podemos crear nuevos atributos fuera del constructor
+
+        </script>
+    </body>
+</html>
