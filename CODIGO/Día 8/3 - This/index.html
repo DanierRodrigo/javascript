@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modificar Objetos</title>
+    </head>
+    <body>
+        <script>
+            let perro = {
+                nombre: "Simba",
+                raza: "Shin Tzu",
+                edad: 4,
+
+                ladrar() {
+                    console.log("Guau");                   
+                },
+
+                saludar() {
+                    console.log("Hola, me llamo " + this.nombre);   
+                }   
+            }
+            let perro2 = {
+                nombre: "Reina",
+                raza: "Caniche",
+                edad: 15,
+
+                ladrar() {
+                    console.log("Guau");                   
+                },
+
+                saludar() {
+                    console.log("Hola, me llamo " + this.nombre);   
+                }
+            }
+        </script>
+    </body>
+</html>
