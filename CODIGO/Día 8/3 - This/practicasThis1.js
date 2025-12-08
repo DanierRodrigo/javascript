@@ -7,5 +7,5 @@ let automovil = {
     marca: 'Ford', 
     modelo: 'Fiesta', 
     anio: 2015, 
-    informacion() { console.log("Marca: " + marca + ", Modelo: " + modelo) }
+    informacion() { console.log("Marca: " + this.marca + ", Modelo: " + this.modelo) }
 };
