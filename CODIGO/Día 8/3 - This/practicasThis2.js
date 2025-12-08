@@ -7,5 +7,5 @@ let polo = {
     marca: 'Lacoste', 
     color: 'Azul', 
     talle: 'L', 
-    fabricar() { console.log("Polo " + marca + " fabricado") }
+    fabricar() { console.log("Polo " + this.marca + " fabricado") }
 };
