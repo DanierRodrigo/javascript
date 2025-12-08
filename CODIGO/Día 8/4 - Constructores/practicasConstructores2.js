@@ -10,3 +10,11 @@ talle: L
 fabricar(): Debe mostrar en consola el mensaje "Polo fabricado"
  */
 
+function Polo(){
+    this.marca = "Lacoste",
+    this.color = "Azul",
+    this.talle = "L",
+    this.fabricar = function() {
+        console.log("Polo fabricado");
+    }
+}
