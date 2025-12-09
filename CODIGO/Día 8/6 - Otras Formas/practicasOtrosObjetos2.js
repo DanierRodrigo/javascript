@@ -9,3 +9,5 @@ let automovil1 = {
     anio: 2015, 
     arrancar() { console.log("En marcha") }
 };
+
+let automovil2 = new Object.create(automovil1);
