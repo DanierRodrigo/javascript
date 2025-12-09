@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parámetros Constructor</title>
+    </head>
+    <body>
+        <script>
+            function Perro(raza, edad) {
+                this.patas = 4;             
+                this.raza = raza;  //Dejamos que sean los valores por parámetro
+                this.edad = edad;
+                this.ladrar = function () {
+                    console.log("Guau");
+                };
+            };
+
+            let simba = new Perro("Shih Tzu", 4);
+            let reina = new Perro("Caniche", 15);
+            let batu = new Perro("Cruce", 8);
+
+            //Ponemos otro ejemplo de cero
+            function Empleado(nombre, apellido, edad, cargo) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.edad = edad;
+                this.cargo = cargo;
+                this.presentarse = function(){
+                    console.log(`Mi nombre es ${this.nombre} ${this.apellido}, soy ${this.cargo} y tengo ${this.edad} años`);
+                }
+            }
+        </script>
+    </body>
+</html>
