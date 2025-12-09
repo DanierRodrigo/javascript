@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Otras formas de crear objetos</title>
+    </head>
+    <body>
+        <script>
+            //Podemos crear objetos con la clase Object
+            let coche1 = new Object(); //Se crea vacío
+
+            coche1.marca = 'Chevrolet';
+            coche1['modelo'] = 'Prisma';
+            coche1.encender = function(){
+                alert("Coche encendido");
+            };
+
+            //Podemos crear sin que esté vacío
+            let perro1 = new Object({nombre: 'Simba'});
+
+            //Podemos usar el método Create, sin necesidad de tener constructor, válido para una vez
+            let coche2 = Object.create(coche1);
+            
+        </script>
+    </body>
+</html>
