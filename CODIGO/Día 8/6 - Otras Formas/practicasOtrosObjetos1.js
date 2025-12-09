@@ -8,3 +8,4 @@ modelo: Fiesta
 anio: 2015
  */
 
+let automovil = new Object({marca: 'Ford',modelo: 'Fiesta', anio: 2015});
