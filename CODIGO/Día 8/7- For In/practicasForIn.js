@@ -18,5 +18,7 @@ let automovil = {
 };
 
 function mostrarInfo() {
-    
+    for(let caracteristica in automovil){
+        console.log(caracteristica + ": " + automovil[caracteristica]);
+    }
 }
