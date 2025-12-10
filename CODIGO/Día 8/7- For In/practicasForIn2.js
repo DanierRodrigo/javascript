@@ -18,5 +18,7 @@ let polo = {
 };
 
 function mostrarInfo() {
-    
+    for(let caracteristica in polo){
+        console.log(caracteristica + ": " + polo[caracteristica]);
+    }
 }
