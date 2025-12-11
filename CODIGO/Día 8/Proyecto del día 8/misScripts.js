@@ -26,6 +26,7 @@ document.getElementById('agregar').addEventListener('click', () => {
 
 
     alert('Empleado agregado correctamente');
+    limpiarCampos();
 });
 
 //Listar Empleados
@@ -48,8 +49,16 @@ document.getElementById('listar').addEventListener('click', () => {
 
         // Quita la última coma
         linea = linea.slice(0, -2);
-        lista += linea + '\n';
+        lista += linea + '\n\n';
     }
 
     alert(lista);
 });
+
+function limpiarCampos(){
+    document.getElementById('nombre').value ="";
+    document.getElementById('apellido').value ="";
+    document.getElementById('edad').value ="";
+    document.getElementById('departamento').value ="";
+    document.getElementById('salario').value ="";
+}
