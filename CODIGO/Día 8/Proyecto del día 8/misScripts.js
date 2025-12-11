@@ -27,3 +27,29 @@ document.getElementById('agregar').addEventListener('click', () => {
 
     alert('Empleado agregado correctamente');
 });
+
+//Listar Empleados
+document.getElementById('listar').addEventListener('click', () => {
+    if (empleados.length === 0) {
+        alert('No hay empleados registrados');
+        return;
+    }
+
+    let lista = '';
+
+    // For of para recorrer empleados
+    for (const emp of empleados) {
+        let linea = '';
+
+        // For in para recorrer atributos del empleado
+        for (const atributo in emp) {
+            linea += `${atributo}: ${emp[atributo]}, `;
+        }
+
+        // Quita la última coma
+        linea = linea.slice(0, -2);
+        lista += linea + '\n';
+    }
+
+    alert(lista);
+});
