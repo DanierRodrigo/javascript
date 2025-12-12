@@ -9,8 +9,9 @@ el contenido de la propiedad proto de la instancia estudiante1,
 que como vimos, va a contener la referencia a su prototipo.
  */
 
-let estudiante;
+let estudiante = {nombre: 'Daniel', apellido: 'Rodrigo', legajo: 34546};
 
 function prototipos() {
-    let estudiante1;    
+    let estudiante1 = Object.create(estudiante)
+    console.log(estudiante1.__proto__);    
 }
