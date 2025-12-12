@@ -10,8 +10,9 @@ se imprima en consola el contenido de la propiedad proto de la instancia auto1,
 que como vimos, va a contener la referencia a su prototipo.
  */
 
-let auto;
+let auto = {marca: 'Wolkswagen', modelo: 'Passat'};
 
 function prototipos() {
-    let auto1;    
+    let auto1 = Object.create(auto);
+    console.log(auto1.__proto__);    
 }
