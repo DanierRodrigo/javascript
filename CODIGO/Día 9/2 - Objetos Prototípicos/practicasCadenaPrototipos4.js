@@ -8,6 +8,18 @@ Se pide que, en la misma función, se imprima en consola
 el resultado de ejecutar el método valueOf() de la instancia pelicula1 .
  */
 
+function Pelicula(titulo, director, duracion) {
+    this.titulo = titulo,
+    this.director = director,
+    this.duracion = duracion 
+}
+
 function prototipos() {
-    
+    let pelicula1 = new Pelicula(
+        "Jurassic Park",
+        "Steven Spielberg",
+        127
+    );
+
+    console.log(pelicula1.valueOf());
 }
