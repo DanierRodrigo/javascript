@@ -6,7 +6,13 @@ utilizando el constructor Empleado antes declarado.
 Y por último, crea otra instancia empleado2, pero ahora utilizando 
 como objeto prototipo empleado1 para poner en práctica 
 el funcionamiento de la cadena de prototipos.
- */
+*/
 
-let empleado1;
-let empleado2;
+function Empleado(nombre, antiguedad, sueldo) {
+    this.nombre = nombre,
+    this.antiguedad = antiguedad,
+    this.sueldo = sueldo 
+}
+
+let empleado1 = new Empleado;
+let empleado2 = Object.create(empleado1);
