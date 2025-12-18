@@ -8,5 +8,11 @@ utilizando como objeto prototipo restaurante1 para poner en práctica
 el funcionamiento de la cadena de prototipos.
  */
 
-let restaurante1;
-let restaurante2;
+function Restaurante(nombre, direccion, ciudad) {
+    this.nombre = nombre,
+    this.direccion = direccion,
+    this.ciudad = ciudad 
+}
+
+let restaurante1 = new Restaurante;
+let restaurante2 = Object.create(restaurante1);
