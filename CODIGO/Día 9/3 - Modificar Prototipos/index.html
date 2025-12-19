@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modificar Prototipos</title>
+    </head>
+    <body>
+        <script>
+            function Libro(autor, titulo, cantPaginas){
+                this.autor = autor;
+                this.titulo = titulo;
+                this.cantPaginas = cantPaginas;
+            }
+
+            let libro1 = new Libro("Stephen King", "Carrie", 256);
+
+            //Con esto solo modificamos el objeto Libro
+            Libro.abrirLibro = function(){
+                alert(this.titulo + " ha sido abierto");
+            }
+
+            //Pero no le sirve a instancias anteriores ni posteriores
+            let libro2 = new Libro("J.L. Borgues", "El Aleph", 361);
+
+            //Esto ocurre porque estamos modificando literal Libro, no su propiedad prototipo,
+            //Que es la que hace que esta propiedad se pueda heredar
+
+            //Vamos a modificar el prototipo
+            Libro.prototype.abrirLibro = function(){
+                alert(this.titulo + " ha sido abierto");
+            }
+            //Ahora si funcionará el método en libro1 y libro2
+            //Automáticamente toca todas las instancias creadas anteriormente también
+
+            //Se recomienda que las propiedades se declaren en el constructor
+            //Y los métodos en su prototipo.
+        </script>
+    </body>
+</html>
