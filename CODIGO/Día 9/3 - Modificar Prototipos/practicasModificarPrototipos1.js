@@ -13,3 +13,9 @@ function Videojuego(nombre, empresa, anioLanzamiento) {
 }
 
 let videojuego1 = new Videojuego('Mario Bros', 'Nintendo', 1983);
+
+Videojuego.prototype.play = function(){
+    console.log(this.nombre + " ha sido iniciado")
+}
+
+videojuego1.play;
