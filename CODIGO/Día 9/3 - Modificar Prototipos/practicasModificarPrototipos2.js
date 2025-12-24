@@ -12,3 +12,9 @@ function Cancion(nombre, autor, album) {
 }
 
 let cancion1 = new Cancion('Take on Me', 'a-ha', 'Hunting High and Low');
+
+Cancion.prototype.stop = function(){
+    console.log(this.nombre + " en pausa")
+}
+
+cancion1.stop;
