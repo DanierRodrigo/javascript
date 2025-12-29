@@ -14,3 +14,18 @@ let auto3 = new Automovil("Honda", "Civic", "Negro", 2022, "Carlos López");
 
 // Array que contiene los automóviles
 let automoviles = [auto1, auto2, auto3];
+
+// Método para vender el automóvil
+Automovil.prototype.venderAutomovil = function(nuevoTitular) {
+  this.titular = nuevoTitular;
+};
+
+// Método para ver la información del auto
+Automovil.prototype.verAuto = function() {
+  return this.marca + " " + this.modelo + " - " + this.anio + " - " + this.titular;
+};
+
+// Método para encender el automóvil
+Automovil.prototype.enceder = function() {
+  alert("El automovil esta en marcha");
+};
