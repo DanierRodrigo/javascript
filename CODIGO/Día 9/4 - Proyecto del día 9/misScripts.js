@@ -29,3 +29,17 @@ Automovil.prototype.verAuto = function() {
 Automovil.prototype.enceder = function() {
   alert("El automovil esta en marcha");
 };
+
+function mostrarAutos() {
+  let lista = document.getElementById("listaAutos");
+
+  // Limpiar la lista antes de volver a mostrarla
+  lista.innerHTML = "";
+
+  // Recorrer el array con For Of
+  for (let auto of automoviles) {
+    const item = document.createElement("li");
+    item.textContent = auto.verAuto();
+    lista.appendChild(item);
+  }
+}
