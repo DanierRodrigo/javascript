@@ -9,3 +9,10 @@ class Persona {
         this.apellido = apellido;
     }
 }
+
+class Empleado extends Persona{
+    constructor(nombre, apellido, legajo){
+        super(nombre, apellido);
+        this.legajo = legajo;
+    }
+}
