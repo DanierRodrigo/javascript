@@ -11,3 +11,10 @@ class Medico {
         this.matricula = matricula;
     }
 }
+
+class Cirujano extends Medico{
+    constructor(nombre, apellido, matricula, cantOperaciones) {
+        super(nombre, apellido, matricula);
+        this.cantOperaciones = cantOperaciones;
+    }
+}
