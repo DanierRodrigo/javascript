@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get y Set</title>
+    </head>
+    <body>
+        <script>
+            class Deportista{
+                constructor(nombre, apellido){
+                    this.nombre = nombre;
+                    this.apellido = apellido;
+                }
+            }
+
+            class Futbolista extends Deportista{
+                constructor(nombre, apellido, goles){
+                    super(nombre, apellido);
+                    this._goles = goles;   //Añadir el _ hace que la propiedad sea privada
+                }
+
+                get goles(){
+                    return this._goles;
+                }
+
+                set goles(nuevoGoles){
+                    this._goles = nuevoGoles;
+                }
+            }
+            
+        </script>
+    </body>
+</html>
