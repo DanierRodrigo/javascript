@@ -42,3 +42,11 @@ class Conejo extends Animal {
         return `Conejo - ${this.nombre} - ${this.peso} kg - ${this.edad} años - Color: ${this.color}`;
     }
 }
+
+// Instancias de animales
+let perro1 = new Perro("Firulais", 12, 5, "Labrador");
+let gato1 = new Gato("Michi", 4, 3, "Macho");
+let conejo1 = new Conejo("Bunny", 2, 2, "Blanco");
+
+// Array con todos los animales
+let animales = [perro1, gato1, conejo1];
