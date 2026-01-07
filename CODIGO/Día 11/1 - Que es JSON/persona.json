@@ -1,0 +1,13 @@
+{
+    "nombre": "Daniel Rodrigo",
+    "edad": 35,
+    "esEstudiante": true,
+    "direccion": {
+        "calle": "Av. María Auxiliadora 37",
+        "ciudad": "Sevilla"
+    },
+    "telefonos": [
+        "638254110",
+        "954533740"
+    ]
+}
