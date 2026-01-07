@@ -50,3 +50,16 @@ let conejo1 = new Conejo("Bunny", 2, 2, "Blanco");
 
 // Array con todos los animales
 let animales = [perro1, gato1, conejo1];
+
+function mostrarAnimales() {
+    let lista = document.getElementById("lista-animales");
+
+    // Limpiar la lista antes de mostrarla nuevamente
+    lista.innerHTML = "";
+
+    for (let animal of animales) {
+        let li = document.createElement("li");
+        li.textContent = animal.informacion();
+        lista.appendChild(li);
+    }
+}
