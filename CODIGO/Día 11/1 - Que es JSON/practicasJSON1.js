@@ -14,4 +14,14 @@ actores (array) -> Leonardo DiCaprio y Kate Winslet
 premioOscar -> true
  */
 
-let json1 = {}
+let json1 = {
+  "titulo": "Titanic",
+  "director": "James Cameron",
+  "lanzamiento": 1997,
+  "duracion": 134,
+  "actores": [
+    "Leonardo DiCaprio",
+    "Kate Winslet"
+  ],
+  "premioOscar": true
+};
