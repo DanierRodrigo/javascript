@@ -14,4 +14,16 @@ cantEstudiantes -> 3
 estudiantes (array) -> Pedro Picapiedra, Pablo Marmol y Vilma Picapiedra
  */
 
-let json1 = {};
+let json1 = {
+  "nombre": "Collegium",
+  "direccion": {
+    "calle": "Calle Publica 123",
+    "ciudad": "Buenos Aires"
+  },
+  "cantEstudiantes": 3,
+  "estudiantes": [
+    "Pedro Picapiedra",
+    "Pablo Marmol",
+    "Vilma Picapiedra"
+  ]
+};
