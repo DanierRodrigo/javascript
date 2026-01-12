@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <head>
+        
+        <title>JSON</title>
+    </head>
+    <body>
+        <div id="nombre"></div>
+        <script>
+            let miPersona = {
+                "nombre": "Daniel Rodrigo",
+                "edad": 35,
+                "esEstudiante": true,
+                "direccion": {
+                   "calle": "Av. María Auxiliadora 37",
+                   "ciudad": "Sevilla"
+                },
+                "telefonos": [
+                    "638254110",
+                   "954533740"
+                ]
+            }
+
+            let elementoTexto = document.getElementById("nombre");
+            elementoTexto.textContent = miPersona.nombre;
+        </script>
+    </body>
+</html>
