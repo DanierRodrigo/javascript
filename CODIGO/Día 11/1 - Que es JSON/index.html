@@ -6,22 +6,20 @@
     <body>
         <div id="nombre"></div>
         <script>
-            let miPersona = {
-                "nombre": "Daniel Rodrigo",
-                "edad": 35,
-                "esEstudiante": true,
-                "direccion": {
-                   "calle": "Av. María Auxiliadora 37",
-                   "ciudad": "Sevilla"
-                },
-                "telefonos": [
-                    "638254110",
-                   "954533740"
-                ]
+            let datosJson;
+            let xhr = new XMLHttpRequest();
+            xhr.open('GET', "persona.json", true);
+            xhr.responseType = 'json';
+            xhr.onload = function() {
+                if(xhr.status === 200) {  //Solicitud exitosa con el servidor
+                    datosJson = xhr.response;
+                    let elementoTexto = document.getElementById("nombre");
+                    elementoTexto.textContent = datosJson.nombre;
+                } else {
+                    // Manejamos el error
+                }
             }
-
-            let elementoTexto = document.getElementById("nombre");
-            elementoTexto.textContent = miPersona.nombre;
+            xhr.send();
         </script>
     </body>
 </html>
