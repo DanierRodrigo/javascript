@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        
+        <title>Catch</title>
+    </head>
+    <body>
+        <div id="nombre"></div>
+        <script>
+        let datosJson;
+
+        fetch('persona.json')
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('Error al cargar el archivo JSON');
+                }
+                return res.json();
+            })
+            .then((salida) => {
+                datosJson = salida;
+
+                let elementoTexto = document.getElementById('nombre');
+                elementoTexto.textContent = datosJson.nombre;
+            })
+            .catch(error => {
+                console.error(error);
+                document.getElementById('nombre').textContent =
+                    'No se pudo cargar el nombre 😢';
+            });
+        </script>
+    </body>
+</html>
