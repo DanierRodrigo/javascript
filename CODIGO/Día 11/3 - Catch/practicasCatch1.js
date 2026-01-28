@@ -21,4 +21,7 @@ function obtenerDatos() {
         actores = salida.actores;
         premioOscar = salida.premioOscar;
     })
+    .catch(function(error) {
+        alert(error);
+    });
 }
