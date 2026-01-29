@@ -19,4 +19,7 @@ function obtenerDatos() {
         cantEstudiantes = salida.cantEstudiantes;
         estudiantes = salida.estudiantes;
     })
+    .catch(function(error) {
+        alert(error);
+    });
 }
