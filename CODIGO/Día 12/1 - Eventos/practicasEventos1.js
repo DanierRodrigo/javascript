@@ -4,6 +4,10 @@ que agregue un evento click al boton miBoton.
 Al disparar el evento, deberá imprimir en consola el mensaje: Boton presionado
  */
 
-function agregarEvento() {
+let boton = document.getElementById('miBoton');
 
+function agregarEvento () {
+    console.log('Boton presionado');
 }
+
+boton.addEventListener('click', agregarEvento);
