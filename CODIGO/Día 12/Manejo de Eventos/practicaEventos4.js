@@ -7,5 +7,13 @@ utilizando la variable event y la función preventDefault.
  */
 
 function agregarEvento() {
-    
+    const link = document.getElementById("miLink");
+
+    link.addEventListener("click", function(event) {
+        event.preventDefault(); // Cancela la navegación
+        console.log("Navegación cancelada");
+    });
 }
+
+// Llamamos la función
+agregarEvento();
