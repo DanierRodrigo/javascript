@@ -9,5 +9,12 @@ Se pide imprimir en consola el contenido del elemento nodeName.
  */
 
 function agregarEvento() {
+    const boton = document.getElementById("miBoton");
 
+    boton.addEventListener("click", function(event) {
+        console.log(event.target.nodeName);
+    });
 }
+
+// Llamamos a la función para que se ejecute
+agregarEvento();
