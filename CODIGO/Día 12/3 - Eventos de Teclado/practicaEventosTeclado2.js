@@ -8,5 +8,11 @@ El número keyCode de la barra espaciadora es 32.
  */
 
 function agregarEvento() {
-    
+    const input = document.getElementById("miInput");
+
+    input.addEventListener("keydown", function (evento) {
+        if (evento.keyCode === 32) {
+            evento.preventDefault();
+        }
+    });
 }
