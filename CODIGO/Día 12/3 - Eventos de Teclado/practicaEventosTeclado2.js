@@ -16,3 +16,15 @@ function agregarEvento() {
         }
     });
 }
+//Así sería la forma actual, no deprecada
+function agregarEvento() {
+    const input = document.getElementById("miInput");
+
+    input.addEventListener("keydown", function (event) {
+        if (event.key === " ") {
+            event.preventDefault();
+        }
+    });
+}
+
+agregarEvento();
