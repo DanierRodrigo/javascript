@@ -5,5 +5,9 @@ Al disparar el evento, deberá imprimir en consola el mensaje: Mouse sobre botó
  */
 
 function agregarEvento() {
-    
+    let boton = document.getElementById("miBoton");
+
+    boton.addEventListener("mouseover", function() {
+        console.log("Mouse sobre botón");
+    });
 }
