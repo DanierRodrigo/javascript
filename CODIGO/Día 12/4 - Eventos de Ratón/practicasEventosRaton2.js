@@ -5,5 +5,9 @@ Al disparar el evento, deberá imprimir en consola el mensaje: Mouse por fuera d
  */
 
 function agregarEvento() {
-    
+    const boton = document.getElementById("miBoton");
+
+    boton.addEventListener("mouseout", function() {
+        console.log("Mouse por fuera de botón");
+    });
 }
