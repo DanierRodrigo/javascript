@@ -4,4 +4,8 @@ y que capture el evento onmessage para recibir mensajes del servidor.
 Al dispararse el evento, se pide imprimir en consola el contenido del mensaje mediante event.data
  */
 
-let socket;
+let socket = new WebSocket("ws://localhost:4200");
+
+socket.onmessage = function(event) {
+  console.log(event.data);
+};
